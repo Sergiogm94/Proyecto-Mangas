@@ -22,6 +22,8 @@
                 <a class="nav-link" href="{{path('mangasList')}}">Listado Mangas</a>
                 <a class="nav-link" href= "{{path("characterslist")}}">Listado Personajes</a>
                 <a class="nav-link" href= "{{path("createManga")}}">Crear Manga</a>
+                <a class="nav-link" href= "{{path("createUser")}}">Crear Cuenta</a>
+                <a class="nav-link" href= "{{path("app_login")}}">Login</a>
             </nav>
             {% if is_granted("ROLE_USER") %}
                 <h3>Usuario: </h3>
