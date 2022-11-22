@@ -1,0 +1,16 @@
+{% extends "Mangas/base.html.twig" %}
+{% block body %}
+        <h1>Listado de Personajes</h1>
+        <div >
+            <div class="card">
+                {% for character in charactersList %}
+                    <div>
+                        <h3>{{character.name}}</h3>
+                        <img class="img" src="{{character.image}}" alt="">
+                        <p> {{character.role}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>  
+
+{% endblock %}

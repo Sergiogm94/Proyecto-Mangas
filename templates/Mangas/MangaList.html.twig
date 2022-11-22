@@ -1,0 +1,24 @@
+{% extends "Mangas/base.html.twig" %}
+{% block body %}
+    <h1>Listado de Mangas</h1>
+    {% for mensaje in app.flashes("Éxito") %}
+    <script> alert("{{mensaje}}") </script>
+    {% endfor %}
+        <div>
+            <div class="card">
+                {% for manga in mangasList %}
+                <div >
+                    <h3>{{manga.name}}</h3>
+                    <img class="img" src="{{manga.image}}" alt="">
+                    <p>Inicio de publicación: {{manga.year}}</p>
+                    <a href="{{path("manga", {id: manga.id})}} class="btn btn-primary"">Más Info</a>
+                    <a href="{{path("editManga", {id: manga.id})}} class="btn btn-primary"">Editar Manga</a>
+                    {% if is_granted("ROLE_ADMIN") %}
+                    <a href="{{path("removeManga", {id: manga.id})}} class="btn btn-primary"">Borrar Manga</a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+.img {
+    width: 500px;
+    height: 700px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,8 @@
+{% extends "Mangas/base.html.twig" %}
+{% block body %}
+    <div>
+        <h2>{{manga.name}}</h2>
+        <img class="img" src="{{manga.image}}" alt="">
+        <p>Inicio de publicación: {{manga.year}}</p>
+    </div>
+{% endblock %}
